@@ -10,7 +10,7 @@ AI Search provider for the [Vercel AI SDK](https://sdk.vercel.ai/). Use Cloudfla
 ```jsonc
 {
 	"compatibility_date": "2026-03-27",
-	"ai_search_namespaces": [{ "binding": "DOCS_SEARCH", "namespace": "default" }],
+	"ai_search_namespaces": [{ "binding": "AI_SEARCH", "namespace": "default" }],
 }
 ```
 
@@ -18,7 +18,7 @@ AI Search provider for the [Vercel AI SDK](https://sdk.vercel.ai/). Use Cloudfla
 import { createAISearchNamespace } from "ai-search-provider";
 import { generateText } from "ai";
 
-const aiSearch = createAISearchNamespace({ binding: env.DOCS_SEARCH });
+const aiSearch = createAISearchNamespace({ binding: env.AI_SEARCH });
 const docs = aiSearch.get("docs"); // instance by name (synchronous, lazy)
 
 const { text } = await generateText({
